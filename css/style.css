@@ -32,15 +32,6 @@ html, body, #map, #map-canvas {
 	pointer-events: all;
 }
 
-.addressBar li { 
-	font-size: 0.8em; 
-	font-weight: normal; 
-	line-height: 16px;
-	display: inline-block; 
-	padding: 0.5em 0.7em; 
-	color: #444; 
-}
-
 .addressBar h2 { 
 	margin: 5px 0 0 10px;
 	font-weight: bold; 
@@ -51,10 +42,6 @@ html, body, #map, #map-canvas {
 
 .addressBar p { 
 	margin-bottom: 0;
-}
-
-.addressBar li:nth-child(2){
-	width: 65%; 
 }
 
 .addressBar input { 
@@ -199,38 +186,37 @@ html, body, #map, #map-canvas {
 
 
 @media only screen and (max-width: 480px) {
+	.overlayInfo {
+		top: 0;
+		width: 100%;
+		margin-left: -50%;
+	}
+
+	.addressBar h2 { 
+		font-size: 0.8em;
+		margin-left: 5px;
+	}
+
+	.addressBar input { 
+		font-size: 1em;
+		padding: 0 3px;
+		width: 85%;
+	}
+
 	.addressBar { 
 		padding: 0; 
 		border: 2px solid #999;
 	}
+
+	.addressBar button { 
+		margin-left: 0;
+		padding: 0 3px;
+	}
 	
-	.addressBar li { 
-		padding: 2px 0 2px 2px;
-	}
-
-	.addressBar li:first-child { 
-		width: 23%;
-		font-size: 0.8em;
-		vertical-align: top; 
-	}
-
-	.addressBar li:nth-child(2){
-		width: 55%; 
-	}
-
-	.addressBar li:nth-child(2) span { 
-		display: none; 
-	}
-
-	.addressBar li:nth-child(2) input { 
-		font-size: 1.2em;
-		padding: 2px 2px 2px 2px;
-	}
-
 	.serviceBox { 
 		font-size: 0.8em; 
 		max-width: 200px;
-		max-height: 18px;
+		max-height: 90px;
 		padding: 2px; 
 	}
 
@@ -238,6 +224,14 @@ html, body, #map, #map-canvas {
 		font-weight: bold; 
 		font-size: 1em; 
 		margin: 0;
+	}
+
+	.serviceBox .poweredBy span{ 
+		margin-left: 15px;
+	}
+
+	.serviceBox .priceKey{ 
+		padding-right: 20px;
 	}
 	
 	.box-expand {
