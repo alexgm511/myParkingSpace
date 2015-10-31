@@ -1,0 +1,247 @@
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+html, body, #map, #map-canvas { 
+	height: 100%; 
+	margin: 0; 
+	padding: 0;
+}
+
+.overlayInfo {
+	position: absolute;
+	top: 5px;
+	left: 50%;
+	width: 80%;
+	margin-left: -40%;
+	z-index: 5;
+	pointer-events: none;
+}
+
+.addressBar { 
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	margin: 0;
+	background-color: #fff; 
+	list-style-type: none; 
+	padding: 5px; 
+	border: 2px solid #999;
+	font-size: 1em;
+	pointer-events: all;
+}
+
+.addressBar li { 
+	font-size: 0.8em; 
+	font-weight: normal; 
+	line-height: 16px;
+	display: inline-block; 
+	padding: 0.5em 0.7em; 
+	color: #444; 
+}
+
+.addressBar h2 { 
+	margin: 5px 0 0 10px;
+	font-weight: bold; 
+	font-size: 1.5em;
+	vertical-align: center; 
+	color: #7c606b;
+}
+
+.addressBar p { 
+	margin-bottom: 0;
+}
+
+.addressBar li:nth-child(2){
+	width: 65%; 
+}
+
+.addressBar input { 
+	margin-top: 2px;
+	padding: 3px 5px 3px 5px;
+	width: 80%; 
+	font-size: 1.2em;
+	border: 0;
+	background-color: #e5eefc;
+	-webkit-box-shadow: 4px 4px 5px 0px rgba(140,136,140,1);
+	-moz-box-shadow: 4px 4px 5px 0px rgba(140,136,140,1);
+	box-shadow: 4px 4px 5px 0px rgba(140,136,140,1);
+}
+
+.addressBar button { margin-left: 5%; }
+
+.serviceBox { 
+	font-size: 0.8em; 
+	position: relative;
+	top: 20px;
+	left: 0;
+	max-width: 220px;
+	max-height: 110px;
+	overflow: hidden;
+	background-color: #fff; 
+	padding: 5px; 
+	border: 2px solid #f74978;
+	pointer-events: all;
+}
+
+.box-expand {
+	max-height: 350px !important;
+	max-width: 220px;
+	overflow: scroll;
+	border-color: #999;
+}
+
+.serviceBox h3 {
+	font-size: 1.6em;
+	font-weight: bold; 
+	color: #7c606b;
+	margin: 0.5em 0 0.2em;
+	padding-bottom: 0.8em;
+	border-bottom: 1px solid #999;
+}
+
+.serviceBox .poweredBy {
+	height: 25px;
+	border-bottom: 2px solid #bfbfbf;
+}
+
+.serviceBox .poweredBy span {
+	margin-left: 35px;
+	line-height: 1.6em;
+} 
+
+.serviceBox .priceKey {
+	height: 40px;
+	padding: 5px 40px 0 0;
+	border-bottom: 2px solid #bfbfbf;
+}
+
+.serviceBox .priceKey span {
+	line-height: 2em;
+} 
+
+.serviceBox .noResult h5 {
+	padding-top: 5px;
+}
+
+.arrows {
+	display: inline-block;
+	width: 20px;
+	height: 13px;
+	margin: 0 0 0 15px;
+	background: url(../images/arrow.png) no-repeat 0 0;
+	background-size: 20px auto;
+}
+
+.arrow-up {
+	background-position: 0 -13px;
+}
+
+.hideMarkers {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #bfbfbf;
+}
+
+.serviceBox .sortRow {
+	line-height: 24px;
+	margin-bottom: 0.8em;
+}
+
+.serviceBox .sortRow select {
+	max-width: 200px;
+}
+
+.serviceBox ul {
+	list-style-type: none; 
+	padding-left: 0;
+}
+
+.serviceBox li {
+	padding: 5px 0 5px;
+	border-bottom: 1px solid #bfbfbf;
+}
+
+.serviceBox li:hover {
+	background-color: #ddd;
+	color: #603;
+}
+
+.serviceBox a {
+	text-decoration: none;
+}
+
+.serviceBox img {
+	max-width: 200px;
+}
+
+.markerMsg {
+	max-width: 120px;
+	font-size: 0.9em;
+}
+
+.markerMsg h2, h5 {
+	margin: 0;
+}
+
+.markerMsg h5 {
+	padding-bottom: 2px;
+	border-bottom: 2px solid #bfbfbf;	
+}
+
+.markerMsg .available {
+	background-color: #ff6666;
+	color: #fff;
+	font-size: 1.1em;
+	padding: 0 5px;
+	margin-bottom: 5px;
+}
+
+
+@media only screen and (max-width: 480px) {
+	.addressBar { 
+		padding: 0; 
+		border: 2px solid #999;
+	}
+	
+	.addressBar li { 
+		padding: 2px 0 2px 2px;
+	}
+
+	.addressBar li:first-child { 
+		width: 23%;
+		font-size: 0.8em;
+		vertical-align: top; 
+	}
+
+	.addressBar li:nth-child(2){
+		width: 55%; 
+	}
+
+	.addressBar li:nth-child(2) span { 
+		display: none; 
+	}
+
+	.addressBar li:nth-child(2) input { 
+		font-size: 1.2em;
+		padding: 2px 2px 2px 2px;
+	}
+
+	.serviceBox { 
+		font-size: 0.8em; 
+		max-width: 200px;
+		max-height: 18px;
+		padding: 2px; 
+	}
+
+	.serviceBox h3 {
+		font-weight: bold; 
+		font-size: 1em; 
+		margin: 0;
+	}
+	
+	.box-expand {
+		max-height: 200px !important;
+		max-width: 220px;
+	}
+}

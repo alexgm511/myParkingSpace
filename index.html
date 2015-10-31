@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="neighborApp" ng-strict-di>
+<head>
+    <meta charset="utf-8">
+	<!-- load bootstrap and fontawesome via CDN -->
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css" />
+ 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+   
+    <title>Neighborhood Map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKffQ59SdaJYYrDkdp995ubP6S8HbXy2o&libraries=places">
+    </script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-controller="mapController">
+    <div id="map" ng-model="map">
+        <div id="map-canvas"></div>
+    </div>
+	<div class="containter overlayInfo">
+	    <div class="addressBar">
+	    	<div class="row">
+	    		<div class="col-md-3">
+	        		<h2>My Parking Space</h2>
+	        	</div>
+	    		<div class="col-md-9">
+			        <input ng-model="location" ng-keyup="$event.keyCode == 13 && findPlace(location)" placeholder="Enter a neighborhood here." />
+					<button class="btn btn-primary" ng-click="findPlace(location)">Go</button>
+	        	</div>
+	    	</div>
+	    </div>
+        <div class="serviceBox">
+            <div class="poweredBy">
+                <span>Powered by</span><a href="http://www.parkwhiz.com/" target="_blank"><img src="images/pw-logo.png" width="100px" class="pull-right" alt="Powered by Parkwhiz"></a>
+            </div>
+            <div id="boxTop" ng-show="gotResults">
+                <div class="priceKey">
+                    <span>Color Key</span><img src="images/price-key.png" width="101px" class="pull-right" alt="Color Key" />
+                </div>
+                <h3 data-venues-toggle>Lots by Name <span class="arrows"></span></h3>
+            </div>
+            <div class="noResult" ng-show="sorryMsg">
+                <h5>Sorry, we have no parking places listed for this location.</h5> 
+            </div>
+            <div class="svsContent">
+                 <div class="parkingList">
+                	<ul>
+	                   <li ng-repeat="place in services" ng-click="showPlace(place)"><a href="">{{ place.price_formatted + ' | ' + place.location_name }}</a></li>
+               		</ul>
+            	</div>
+            </div>
+        </div>
+
+
+	</div>
+
+</body>
+</html>
