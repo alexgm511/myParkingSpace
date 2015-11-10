@@ -17,6 +17,10 @@
 		$scope.parkResults = [];
 		$scope.gotResults = false;
 		$scope.sorryMsg = false;
+		$scope.myLat = 38.899192;
+		$scope.myLng = -77.036871;
+		$scope.defZoom = 16;
+
 
         // Get the location object from the current map
         
@@ -197,7 +201,7 @@
             $scope.map.panTo(newLocation);
         };
 		$scope.map = gmap;
-		$scope.findPlace('White House');
+		$scope.findPlace('White House, Washington, DC');
 
 	}]);
 

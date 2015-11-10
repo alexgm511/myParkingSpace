@@ -22,7 +22,7 @@ html, body, #map, #map-canvas {
 	position: relative;
 	top: 0;
 	left: 0;
-	width: 100%;
+	width: 60%;
 	margin: 0;
 	background-color: #fff; 
 	list-style-type: none; 
@@ -64,7 +64,7 @@ html, body, #map, #map-canvas {
 	top: 20px;
 	left: 0;
 	max-width: 220px;
-	max-height: 110px;
+	max-height: 90px;
 	overflow: hidden;
 	background-color: #fff; 
 	padding: 5px; 
@@ -77,6 +77,15 @@ html, body, #map, #map-canvas {
 	max-width: 220px;
 	overflow: scroll;
 	border-color: #999;
+}
+
+.parkTitle {
+	background-color: #7c606b;
+	font-weight: bold; 
+	font-size: 1.5em;
+	text-align: center;
+	vertical-align: center; 
+	color: #ffffff;
 }
 
 .serviceBox h3 {
@@ -95,7 +104,7 @@ html, body, #map, #map-canvas {
 
 .serviceBox .poweredBy span {
 	margin-left: 35px;
-	line-height: 1.6em;
+	line-height: 1.8em;
 } 
 
 .serviceBox .priceKey {
@@ -160,6 +169,7 @@ html, body, #map, #map-canvas {
 
 .serviceBox img {
 	max-width: 200px;
+	padding-top: 3px; 
 }
 
 .markerMsg {
@@ -189,25 +199,21 @@ html, body, #map, #map-canvas {
 		width: 85%;
 		margin-left: -43%;
 	}
+	.addressBar { 
+		width: 70%;
+	}
 	.addressBar h2 { 
 		font-size: 1.2em;
 	}
-
-	.addressBar input { 
-		font-size: 1.2em;
+	.serviceBox { 
+		max-height: 85px;
 	}
-
-	.addressBar button { 
-		padding: 1px 5px;
-	}
-
 	.serviceBox h3 {
 		font-size: 1.2em; 
 	}
 
 	.serviceBox img {
 		width: 90px;
-		padding-top: 2px; 
 	}
 
 }
@@ -221,15 +227,8 @@ html, body, #map, #map-canvas {
 		font-size: 1em;
 		margin-left: 7px;
 	}
-
-	.addressBar input { 
-		font-size: 1em;
-		padding: 2px 5px;
-		width: 85%;
-	}
-	.addressBar button { 
-		margin-left: 0;
-		padding: 1px 5px;
+	.addressBar { 
+		width: 80%;
 	}
 	.serviceBox h3 {
 		font-size: 1em; 
@@ -242,38 +241,17 @@ html, body, #map, #map-canvas {
 		width: 100%;
 		margin-left: -50%;
 	}
-
-	.addressBar h2 { 
-		font-size: 0.8em;
-		margin-left: 5px;
-	}
-
-	.addressBar input { 
-		font-size: 1em;
-		padding: 0 3px;
-		width: 85%;
-	}
-
 	.addressBar { 
-		padding: 0; 
-		border: 2px solid #999;
+		width: 100%;
 	}
-
-	.addressBar button { 
-		margin-left: 0;
-		padding: 0 3px;
-	}
-	
 	.serviceBox { 
 		font-size: 0.8em; 
 		max-width: 200px;
-		max-height: 90px;
 		padding: 2px; 
 	}
 
 	.serviceBox h3 {
 		font-size: 1em; 
-		margin: 0;
 	}
 
 	.serviceBox .poweredBy span{ 
@@ -285,7 +263,7 @@ html, body, #map, #map-canvas {
 	}
 	
 	.box-expand {
-		max-height: 200px !important;
-		max-width: 220px;
+		max-height: 220px !important;
+		max-width: 200px;
 	}
 }

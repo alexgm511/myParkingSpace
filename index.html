@@ -22,24 +22,22 @@
 	<div class="containter overlayInfo">
 	    <div class="addressBar">
 	    	<div class="row">
-	    		<div class="col-md-3 col-xs-4">
-	        		<h2>My Parking Space</h2>
-	        	</div>
-	    		<div class="col-md-9 col-xs-8">
+	    		<div class="col-md-12 col-xs-12">
 			        <input ng-model="location" ng-keyup="$event.keyCode == 13 && findPlace(location)" placeholder="Enter a neighborhood here." />
 					<button class="btn btn-primary" ng-click="findPlace(location)">Go</button>
 	        	</div>
 	    	</div>
 	    </div>
         <div class="serviceBox">
+            <div class="parkTitle">My Parking Space</div>
             <div class="poweredBy">
                 <span>Powered by</span><a href="http://www.parkwhiz.com/" target="_blank"><img src="images/pw-logo.png" width="100px" class="pull-right" alt="Powered by Parkwhiz"></a>
             </div>
             <div id="boxTop" ng-show="gotResults">
+                <h3 data-venues-toggle>Lots by Name <span class="arrows"></span></h3>
                 <div class="priceKey">
                     <span>Color Key</span><img src="images/price-key.png" width="101px" class="pull-right" alt="Color Key" />
                 </div>
-                <h3 data-venues-toggle>Lots by Name <span class="arrows"></span></h3>
             </div>
             <div class="noResult" ng-show="sorryMsg">
                 <h5>Sorry, we have no parking places listed for this location.</h5> 
