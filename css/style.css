@@ -93,7 +93,6 @@ html, body, #map, #map-canvas {
 	font-weight: bold; 
 	color: #7c606b;
 	margin: 0.5em 0 0.2em;
-	padding-bottom: 0.8em;
 	border-bottom: 1px solid #999;
 }
 
@@ -109,7 +108,7 @@ html, body, #map, #map-canvas {
 
 .serviceBox .priceKey {
 	height: 40px;
-	padding: 5px 40px 0 0;
+	padding: 5px 0 0 0;
 	border-bottom: 2px solid #bfbfbf;
 }
 
@@ -255,7 +254,7 @@ html, body, #map, #map-canvas {
 	}
 
 	.serviceBox .poweredBy span{ 
-		margin-left: 15px;
+		margin-left: 5px;
 	}
 
 	.serviceBox .priceKey{ 
